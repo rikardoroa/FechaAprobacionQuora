@@ -40,10 +40,10 @@ public class fecha {
 	String abril30;
 	int diamayofes;
 	int diamayonor;
-    int minjunio;
-    int maxjunio;
-    int diajunion;
-    int diajuniof01;
+        int minjunio;
+        int maxjunio;
+        int diajunion;
+        int diajuniof01;
 
 	@SuppressWarnings("unused")
 	public void generafechaauto() throws ParseException {
@@ -58,14 +58,14 @@ public class fecha {
 		    
 		 junio.addAll(5,6,7,8,9,10,11,12,13,14);
 		 diasmes.addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
-		 febrerof.addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29);
-	     marzoN.addAll(13,14,15,16,17,18,19,20,21,22);
-	     marzoabril.addAll(31);
-	     abrilmayo.addAll("2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30");//capturar en bd
-	     abrilmayo2.addAll(22,23,24,25,26,27,28,29,30);
-	     mayo.addAll(15,16,17,18,19,20,21,22,23,24);
-	     min = Collections.min(marzoN);
-	     minabrilmayo = Collections.min(abrilmayo2);
+	         febrerof.addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29);
+		 marzoN.addAll(13,14,15,16,17,18,19,20,21,22);
+		 marzoabril.addAll(31);
+	         abrilmayo.addAll("2020-04-22","2020-04-23","2020-04-24","2020-04-25","2020-04-26","2020-04-27","2020-04-28","2020-04-29","2020-04-30");//capturar en bd
+	         abrilmayo2.addAll(22,23,24,25,26,27,28,29,30);
+	         mayo.addAll(15,16,17,18,19,20,21,22,23,24);
+	         min = Collections.min(marzoN);
+	         minabrilmayo = Collections.min(abrilmayo2);
 		 minmayo=Collections.min(mayo);
 		 minjunio=Collections.min(junio);
 		 maxjunio=Collections.max(junio);
@@ -74,7 +74,7 @@ public class fecha {
 		formateo.setCalendar(calendarioactual);
 		String date =formateo.format(calendarioactual.getTime());
 		
-		int aÒo = calendarioactual.get(Calendar.YEAR);
+		int a√±o = calendarioactual.get(Calendar.YEAR);
 		int mes = calendarioactual.get(Calendar.MONTH);
 		
 		int mesactual= mes+1;
@@ -90,8 +90,8 @@ public class fecha {
 			e1.printStackTrace();
 		}
    	String fechaaproformateada = formateo.format(nuevocalendario.getTime());
-    java.util.Date mifecha = new SimpleDateFormat("yyyy-MM-dd").parse(fechaaprobacion);//-------mifecha
-   	int aÒoaprobacion=nuevocalendario.get(Calendar.YEAR);
+        java.util.Date mifecha = new SimpleDateFormat("yyyy-MM-dd").parse(fechaaprobacion);//-------mifecha
+   	int a√±oaprobacion=nuevocalendario.get(Calendar.YEAR);
    	int mesaprobacion=nuevocalendario.get(Calendar.MONTH);
    	int diaaprobacion=nuevocalendario.get(Calendar.DAY_OF_MONTH);
    	int mesfinalaprobacion=mesaprobacion+1;
@@ -105,7 +105,7 @@ public class fecha {
 	}
 
 		
-		    Calendar enerofestivo1 = new GregorianCalendar();
+		        Calendar enerofestivo1 = new GregorianCalendar();
 	   		enerofestivo1.set(Calendar.YEAR, 2020);
 	   		enerofestivo1.set(Calendar.MONTH, 00);
 	   		enerofestivo1.set(Calendar.DAY_OF_MONTH, 1); 
@@ -158,15 +158,15 @@ public class fecha {
 	   		mayofestivo01.set(Calendar.YEAR, 2020);
 	   		mayofestivo01.set(Calendar.MONTH, 04);
 	   		mayofestivo01.set(Calendar.DAY_OF_MONTH, 1); 
-	   	    String fechamayo1=formateo.format(mayofestivo01.getTime());
+	   	        String fechamayo1=formateo.format(mayofestivo01.getTime());
 	   		
 	   	    //----------------calculo de fechas para comparar string fechas mayo----------------------//
-	     	Calendar xmayo = new GregorianCalendar();
+	     	        Calendar xmayo = new GregorianCalendar();
 	   		java.util.Date fecha1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaaproformateada);
 			java.util.Date fecha2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechamayo1); 
-		    long DateDiference = fecha2.getTime() - fecha1.getTime();
+		        long DateDiference = fecha2.getTime() - fecha1.getTime();
 			int diasdiferencia=  (int) (DateDiference / (24* 1000 * 60 * 60));
-		    xmayo.add(Calendar.DATE,diasdiferencia);
+		        xmayo.add(Calendar.DATE,diasdiferencia);
 			String finaldate=formateo.format(xmayo.getTime());	
 			String mifechaf1 = formateo.format(fecha1);
 			String mifechaf2 = formateo.format(mifecha);
@@ -190,12 +190,12 @@ public class fecha {
 	   		String fechajunio1=formateo.format(juniofestivo01.getTime());
 	   		
 	   	   //----------------calculo de fechas para comparar string fechas junio----------------------//
-	     	Calendar xjunio = new GregorianCalendar();
+	     	        Calendar xjunio = new GregorianCalendar();
 	   		java.util.Date fechajun1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaaproformateada);
 			java.util.Date fechajun2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechajunio1); 
-		    long DateDiferencejun = fechajun2.getTime() - fechajun1.getTime();
+		        long DateDiferencejun = fechajun2.getTime() - fechajun1.getTime();
 			int diasdiferenciajun=  (int) (DateDiferencejun / (24* 1000 * 60 * 60));
-		    xjunio.add(Calendar.DATE,diasdiferenciajun);
+		        xjunio.add(Calendar.DATE,diasdiferenciajun);
 			String finaldatejun=formateo.format(xjunio.getTime());	
 			String mifechafjun1 = formateo.format(fechajun1);
 			String mifechafjun2 = formateo.format(mifecha);
@@ -676,27 +676,27 @@ public class fecha {
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 		   					
 		   					}
-	   					if(diax.equals("miÈ")&& diaaprobacion+1==diafenero02 ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+1==diafenero02 ) {
 		   				     SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+" "+"y la nueva fecha es:"+newdate);
 		   					
 		   					}
-	   					if(diax.equals("miÈ")&& diaaprobacion+2==diafenero02 ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+2==diafenero02 ) {
 		   				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 		   					
 		   					}
-	   					if(diax.equals("miÈ")&& diaaprobacion+3==diafenero02) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+3==diafenero02) {
 		   				     SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 		   					}
-	   					if(diax.equals("miÈ")&& diaaprobacion+4==diafenero02 ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+4==diafenero02 ) {
 		   					 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 9);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -758,26 +758,26 @@ public class fecha {
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es 4:"+newdate);
 		   					
 		   					}
-	   					    if(diax.equals("s·b")&& diaaprobacion+1==diafenero02 ) {
+	   					    if(diax.equals("s√°b")&& diaaprobacion+1==diafenero02 ) {
 		   			          SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es :"+newdate);
 		   					}
-	   					  if(diax.equals("s·b")&& diaaprobacion+2==diafenero02 ) {
+	   					  if(diax.equals("s√°b")&& diaaprobacion+2==diafenero02 ) {
 		   			          SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 11);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es :"+newdate);
 		   					}
-	   					 if(diax.equals("s·b")&& diaaprobacion+3==diafenero02 ) {
+	   					 if(diax.equals("s√°b")&& diaaprobacion+3==diafenero02 ) {
 		   			          SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 11);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es :"+newdate);
 		   					}
 	   					
-	   					   if(diax.equals("s·b")&& diaaprobacion+4==diafenero02 ) {
+	   					   if(diax.equals("s√°b")&& diaaprobacion+4==diafenero02 ) {
 		   			          SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 11);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -796,7 +796,7 @@ public class fecha {
 			   					  newdate=formateofecha.format(nuevocalendario.getTime());
 			   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es: "+newdate);
 		   					   }
-	   					 if(diax.equals("miÈ")&& diaaprobacion==diafenero02 ) {
+	   					 if(diax.equals("mi√©")&& diaaprobacion==diafenero02 ) {
 		   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 			   					 nuevocalendario.add(Calendar.DATE, 9);
 			   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -814,7 +814,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es 1a:"+newdate);
 	   					   }
-	   					if(diax.equals("s·b")&& diaaprobacion==diafenero02 ) {
+	   					if(diax.equals("s√°b")&& diaaprobacion==diafenero02 ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -835,7 +835,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 	   					}
-	   					if((diax.equals("miÈ") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesEne) || (diax.equals("miÈ") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesFeb) )  {
+	   					if((diax.equals("mi√©") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesEne) || (diax.equals("mi√©") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesFeb) )  {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -853,7 +853,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es "+newdate);
 	   					}
-	   					if((diax.equals("s·b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesEne) || (diax.equals("s·b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesFeb) )  {
+	   					if((diax.equals("s√°b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesEne) || (diax.equals("s√°b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesEne && mesactual==mesFeb) )  {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -875,9 +875,9 @@ public class fecha {
 		   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 			   					 nuevocalendario.add(Calendar.DATE, 9);
 			   					  newdate=formateofecha.format(nuevocalendario.getTime());
-			   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es pÒÒp:"+newdate);
+			   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es p√±√±p:"+newdate);
 		   					   }
-	   					 if((diax.equals("miÈ")&& diaaprobacion==diafebrero && diafebrero < diaprobacion && mesfinalaprobacion==mesFeb && mesactual==mesFeb) || (diax.equals("miÈ")&& diaaprobacion==diafebrero && diafebrero < diaprobacion  && mesfinalaprobacion==mesFeb && mesactual==mesMar)) {
+	   					 if((diax.equals("mi√©")&& diaaprobacion==diafebrero && diafebrero < diaprobacion && mesfinalaprobacion==mesFeb && mesactual==mesFeb) || (diax.equals("mi√©")&& diaaprobacion==diafebrero && diafebrero < diaprobacion  && mesfinalaprobacion==mesFeb && mesactual==mesMar)) {
 		   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 			   					 nuevocalendario.add(Calendar.DATE, 9);
 			   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -895,7 +895,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **:"+newdate);
 	   					   }
-	   					 if((diax.equals("s·b")&& diaaprobacion==diafebrero && diafebrero < diaprobacion && mesfinalaprobacion==mesFeb && mesactual==mesFeb) || (diax.equals("s·b")&& diaaprobacion==diafebrero && diafebrero < diaprobacion  && mesfinalaprobacion==mesFeb && mesactual==mesMar)) {
+	   					 if((diax.equals("s√°b")&& diaaprobacion==diafebrero && diafebrero < diaprobacion && mesfinalaprobacion==mesFeb && mesactual==mesFeb) || (diax.equals("s√°b")&& diaaprobacion==diafebrero && diafebrero < diaprobacion  && mesfinalaprobacion==mesFeb && mesactual==mesMar)) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -918,7 +918,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 	   					}
-	   					if((diax.equals("miÈ") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesMar) || (diax.equals("miÈ") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesAbril) ) {
+	   					if((diax.equals("mi√©") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesMar) || (diax.equals("mi√©") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesAbril) ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -936,7 +936,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es yyyyy:"+newdate);
 	   					}
-	   					if((diax.equals("s·b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesMar) || (diax.equals("s·b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesAbril) ) {
+	   					if((diax.equals("s√°b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesMar) || (diax.equals("s√°b") && diaaprobacion==diaprobacion && mesfinalaprobacion==mesMar && mesactual==mesAbril) ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -959,7 +959,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es pppppppppp:"+newdate);
 	   					}
 	   					
-	   					if(diax.equals("miÈ") && diaaprobacion+10==diamarzo ) {
+	   					if(diax.equals("mi√©") && diaaprobacion+10==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 9);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -977,7 +977,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es a **a:"+newdate);
 	   					}
-	   					if(diax.equals("s·b") && diaaprobacion+10==diamarzo ) {
+	   					if(diax.equals("s√°b") && diaaprobacion+10==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -996,7 +996,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es ooooo:"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&& diaaprobacion+9==diamarzo ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+9==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1014,7 +1014,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **b:"+newdate);
 	   					}
-	   					if(diax.equals("s·b") && diaaprobacion+9==diamarzo ) {
+	   					if(diax.equals("s√°b") && diaaprobacion+9==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1033,7 +1033,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es  hhhhhhh:"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&&  diaaprobacion+8==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+8==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1051,7 +1051,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **c:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&& diaaprobacion+8==diamarzo ) {
+	   					if(diax.equals("s√°b")&& diaaprobacion+8==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1072,7 +1072,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es  yyyyyy:"+newdate);
 	   					}			
 	   					
-	   					if(diax.equals("miÈ")&& diaaprobacion+7==diamarzo ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+7==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1091,7 +1091,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **d:"+newdate);
 	   					}
 	   					
-	   					if(diax.equals("s·b") && diaaprobacion+7==diamarzo ) {
+	   					if(diax.equals("s√°b") && diaaprobacion+7==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1111,7 +1111,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es: ghghgh"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&&  diaaprobacion+6==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+6==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1129,7 +1129,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **e:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&&  diaaprobacion+6==diamarzo ) {
+	   					if(diax.equals("s√°b")&&  diaaprobacion+6==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1150,7 +1150,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es  bnmb:"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&&  diaaprobacion+5==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+5==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1170,7 +1170,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **f:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&&  diaaprobacion+5==diamarzo ) {
+	   					if(diax.equals("s√°b")&&  diaaprobacion+5==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE,11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1191,7 +1191,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es ghjk:"+newdate);
 	   					}
 	   					
-	   					if(diax.equals("miÈ")&& diaaprobacion+4==diamarzo ) {
+	   					if(diax.equals("mi√©")&& diaaprobacion+4==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 9);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1210,7 +1210,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **g:"+newdate);
 	   					}
 	   					
-	   					if(diax.equals("s·b")&& diaaprobacion+4==diamarzo ) {
+	   					if(diax.equals("s√°b")&& diaaprobacion+4==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1230,7 +1230,7 @@ public class fecha {
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es jhjh:"+newdate);
 	   					}
 	   					
-	   					if(diax.equals("miÈ")&&  diaaprobacion+3==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+3==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1249,7 +1249,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **h:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&&  diaaprobacion+3==diamarzo ) {
+	   					if(diax.equals("s√°b")&&  diaaprobacion+3==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1268,7 +1268,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es tyty:"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&&  diaaprobacion+2==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+2==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1286,7 +1286,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **i:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&& diaaprobacion+2==diamarzo ) {
+	   					if(diax.equals("s√°b")&& diaaprobacion+2==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 11);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1305,7 +1305,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es xxx:"+newdate);
 	   					}
-	   					if(diax.equals("miÈ")&&  diaaprobacion+1==diamarzo ) {
+	   					if(diax.equals("mi√©")&&  diaaprobacion+1==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1323,7 +1323,7 @@ public class fecha {
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
 	   						 System.out.println("el dia es:"+diax+""+"y la nueva fecha es **j:"+newdate);
 	   					}
-	   					if(diax.equals("s·b")&&  diaaprobacion+1==diamarzo ) {
+	   					if(diax.equals("s√°b")&&  diaaprobacion+1==diamarzo ) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   						 nuevocalendario.add(Calendar.DATE, 10);
 	   						  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1344,7 +1344,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha a es fff:"+newdate);
 	   					   }
-	   				  if(diax.equals("miÈ")&& diaaprobacion==diamarzot) {
+	   				  if(diax.equals("mi√©")&& diaaprobacion==diamarzot) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 9);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1362,7 +1362,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha a es **k:"+newdate);
 	   					   }
-	   				  if(diax.equals("s·b")&& diaaprobacion==diamarzot) {
+	   				  if(diax.equals("s√°b")&& diaaprobacion==diamarzot) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1383,7 +1383,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha a es xf:"+newdate);
 	   					   }
-	   				  if(diax.equals("miÈ")&& diaaprobacion==diamarzod) {
+	   				  if(diax.equals("mi√©")&& diaaprobacion==diamarzod) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 9);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1401,7 +1401,7 @@ public class fecha {
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
 		   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha a es **aa:"+newdate);
 	   					   }
-	   				 if(diax.equals("s·b")&& diaaprobacion==diamarzod) {
+	   				 if(diax.equals("s√°b")&& diaaprobacion==diamarzod) {
 	   					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 		   					 nuevocalendario.add(Calendar.DATE, 10);
 		   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1512,49 +1512,49 @@ public class fecha {
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es hh:"+newdate);
 					}
 
-	   				if(diax.equals("miÈ")&& diaaprobacion+9==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+9==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+8==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+8==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+7==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+7==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+6==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+6==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+5==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+5==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 10);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+4==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+4==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 10);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+3==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+3==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha xxdd es:"+newdate);
    					}
-	   				if(diax.equals("miÈ")&& diaaprobacion+2==diaabrilf) {
+	   				if(diax.equals("mi√©")&& diaaprobacion+2==diaabrilf) {
    					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1660,49 +1660,49 @@ public class fecha {
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
 	
-	   				if(diax.equals("s·b")&& diaaprobacion+9==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+9==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 11);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+8==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+8==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 11);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+7==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+7==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+6==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+6==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+5==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+5==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+4==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+4==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+3==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+3==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 12);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 						}
-	   				if(diax.equals("s·b")&& diaaprobacion+2==diaabrilf) {
+	   				if(diax.equals("s√°b")&& diaaprobacion+2==diaabrilf) {
 						 SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 11);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1724,7 +1724,7 @@ public class fecha {
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
 	   					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es jj:"+newdate);
 					   }
-	   			 if(diax.equals("miÈ")&& diaaprobacion==diaabrilf) {
+	   			 if(diax.equals("mi√©")&& diaaprobacion==diaabrilf) {
 					    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 	   					 nuevocalendario.add(Calendar.DATE, 9);
 	   					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1742,7 +1742,7 @@ public class fecha {
    					  newdate=formateofecha.format(nuevocalendario.getTime());
    					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				   }
-	   			if(diax.equals("s·b")&& diaaprobacion==diaabrilf) {
+	   			if(diax.equals("s√°b")&& diaaprobacion==diaabrilf) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
    					 nuevocalendario.add(Calendar.DATE, 10);
    					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -1771,7 +1771,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril22.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril22.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril22.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril22.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1798,7 +1798,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril22.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril22.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril22.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril22.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1830,7 +1830,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril23.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril23.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril23.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril23.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1857,7 +1857,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril23.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril23.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril23.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril23.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1889,7 +1889,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril24.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril24.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril24.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril24.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1916,7 +1916,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril24.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril24.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril24.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril24.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1948,7 +1948,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril25.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril25.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril25.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril25.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -1975,7 +1975,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril25.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril25.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril25.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril25.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2009,7 +2009,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril26.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril26.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril26.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril26.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2036,7 +2036,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril26.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril26.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril26.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril26.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2068,7 +2068,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril27.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril27.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril27.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril27.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2095,7 +2095,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril27.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril27.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril27.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril27.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2126,7 +2126,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril28.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril28.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril28.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril28.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2153,7 +2153,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril28.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril28.equals(fechaaproformateada)) ) {
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril28.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril28.equals(fechaaproformateada)) ) {
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2184,7 +2184,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril29.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril29.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril29.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril29.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2211,7 +2211,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril29.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril29.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril29.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril29.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2242,7 +2242,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril30.equals(fechaaproformateada))) || (diax.equals("miÈ") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril30.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril30.equals(fechaaproformateada))) || (diax.equals("mi√©") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril30.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2269,7 +2269,7 @@ public class fecha {
 				    newdate=miformatf.format(cal4.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			   }
-	   			if( ((diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril30.equals(fechaaproformateada))) || (diax.equals("s·b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril30.equals(fechaaproformateada)) ) {	
+	   			if( ((diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesAbril && abril30.equals(fechaaproformateada))) || (diax.equals("s√°b") && mifechaf1.equals(mifechaf2) && fecha2.compareTo(mifecha)>0 && diaaprobacion==diaabrilmayo && mesactual==mesMAyo && abril30.equals(fechaaproformateada)) ) {	
 	   				Calendar cal4 = new GregorianCalendar();  
  					SimpleDateFormat miformatf = new SimpleDateFormat("yyyy-MM-dd");
  					cal4 = Calendar.getInstance(); 
@@ -2294,7 +2294,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				   }
-	   		 if(diax.equals("miÈ")&& diaaprobacion==diamayo) {
+	   		 if(diax.equals("mi√©")&& diaaprobacion==diamayo) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 9);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2313,7 +2313,7 @@ public class fecha {
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				   }
 	
-	   		 if(diax.equals("s·b")&& diaaprobacion==diamayo) {
+	   		 if(diax.equals("s√°b")&& diaaprobacion==diamayo) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 10);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2334,7 +2334,7 @@ public class fecha {
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
 	   		 
-	   		if(diax.equals("miÈ") && diaaprobacion+10==diamayofes ) {
+	   		if(diax.equals("mi√©") && diaaprobacion+10==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 9);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2355,7 +2355,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				}
-	 		 if(diax.equals("s·b") && diaaprobacion+10==diamayofes ) {
+	 		 if(diax.equals("s√°b") && diaaprobacion+10==diamayofes ) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 11);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2374,7 +2374,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+9==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+9==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2392,7 +2392,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+9==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+9==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2410,7 +2410,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+8==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+8==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2428,7 +2428,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+8==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+8==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2447,7 +2447,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+7==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+7==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2465,7 +2465,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+7==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+7==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2484,7 +2484,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+6==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+6==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2503,7 +2503,7 @@ public class fecha {
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
 	 		
-	 		if(diax.equals("s·b") && diaaprobacion+6==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+6==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2521,7 +2521,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+5==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+5==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2539,7 +2539,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+5==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+5==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2557,7 +2557,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+4==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+4==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 9);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2575,7 +2575,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+4==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+4==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2593,7 +2593,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+3==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+3==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2611,7 +2611,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+3==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+3==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2629,13 +2629,13 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+2==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+2==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+2==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+2==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2653,7 +2653,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+2==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+2==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 11);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2671,7 +2671,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion+1==diamayofes ) {
+	 		if(diax.equals("mi√©") && diaaprobacion+1==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2689,7 +2689,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion+1==diamayofes ) {
+	 		if(diax.equals("s√°b") && diaaprobacion+1==diamayofes ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2712,7 +2712,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("miÈ") && diaaprobacion==diamayonor ) {
+	 		if(diax.equals("mi√©") && diaaprobacion==diamayonor ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 9);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2730,7 +2730,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-	 		if(diax.equals("s·b") && diaaprobacion==diamayonor ) {
+	 		if(diax.equals("s√°b") && diaaprobacion==diamayonor ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2750,7 +2750,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 			}
-			if(diax.equals("miÈ") && diaaprobacion==diaprobacion  && mesfinalaprobacion==mesMAyo && mesactual==mesMAyo ) {
+			if(diax.equals("mi√©") && diaaprobacion==diaprobacion  && mesfinalaprobacion==mesMAyo && mesactual==mesMAyo ) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 9);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2768,7 +2768,7 @@ public class fecha {
 				  newdate=formateofecha.format(nuevocalendario.getTime());
 				 System.out.println("el dia es:"+diax+""+"y la nueva fecha es :"+newdate);
 			}
-			if(diax.equals("s·b") && diaaprobacion==diaprobacion   && mesfinalaprobacion==mesMAyo && mesactual==mesMAyo) {
+			if(diax.equals("s√°b") && diaaprobacion==diaprobacion   && mesfinalaprobacion==mesMAyo && mesactual==mesMAyo) {
 			    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 				 nuevocalendario.add(Calendar.DATE, 10);
 				  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2791,7 +2791,7 @@ public class fecha {
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				   }
 	   				
-			 if(diax.equals("miÈ")&& diaaprobacion==diajunion) {
+			 if(diax.equals("mi√©")&& diaaprobacion==diajunion) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 9);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2812,7 +2812,7 @@ public class fecha {
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				   }
 	   				
-			 if(diax.equals("s·b")&& diaaprobacion==diajunion) {
+			 if(diax.equals("s√°b")&& diaaprobacion==diajunion) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 10);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2833,7 +2833,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				}  
-			   if(diax.equals("miÈ")&& diaaprobacion+10==diajuniof01 ) {
+			   if(diax.equals("mi√©")&& diaaprobacion+10==diajuniof01 ) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 9);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2853,7 +2853,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate); 
 				}
-			   if(diax.equals("s·b")&& diaaprobacion+10==diajuniof01 ) {
+			   if(diax.equals("s√°b")&& diaaprobacion+10==diajuniof01 ) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 11);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2873,7 +2873,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				}
-			   if(diax.equals("miÈ")&& diaaprobacion+9==diajuniof01 ) {
+			   if(diax.equals("mi√©")&& diaaprobacion+9==diajuniof01 ) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 10);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
@@ -2891,7 +2891,7 @@ public class fecha {
 					  newdate=formateofecha.format(nuevocalendario.getTime());
 					 System.out.println("el dia es:"+diax+""+"y la nueva fecha es:"+newdate);
 				}
-			   if(diax.equals("s·b")&& diaaprobacion+9==diajuniof01 ) {
+			   if(diax.equals("s√°b")&& diaaprobacion+9==diajuniof01 ) {
 				    SimpleDateFormat formateofecha = new SimpleDateFormat("yyyy-MM-dd");
 					 nuevocalendario.add(Calendar.DATE, 11);
 					  newdate=formateofecha.format(nuevocalendario.getTime());
